@@ -8,8 +8,13 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function OrphanagesMap () {
     const navigation = useNavigation();
-    function handleNavigateToOrphanageDetails(){
+
+    function handleNavigateToOrphanageDetails() {
         navigation.navigate('OrphanageDetails');
+    }
+
+    function handleNavigateToCreateOrphanage() {
+        navigation.navigate('SelectMapPosition');
     }
 
     return (
@@ -46,7 +51,7 @@ export default function OrphanagesMap () {
         <View style={styles.footer}>
         <Text style={styles.footerText}>2 orfanatos encontrados</Text>
 
-        <TouchableOpacity style={styles.createOrphanageButton} onPress={() => {}}>
+        <TouchableOpacity style={styles.createOrphanageButton} onPress={handleNavigateToCreateOrphanage}>
             <Feather name="plus" size={20} color='#fff'/>
 
 
